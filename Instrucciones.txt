@@ -1,5 +1,5 @@
 1- Crear carpeta y clase Dto
-2- Crear carpeta e interfaz para repositorio
+2- Crear carpeta e interfaz para repositorio y servicio
 3- Instalar AutoMapper
 4- En la raiz del proyecto crear archivo y clase 
 MappingConfiguration {
@@ -16,8 +16,9 @@ MappingConfiguration {
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-6- Agregar clase repositorio e implementar interfaz creada anteriormente
-7- Agregar servicio repositorio en Program
+6- Agregar clase repositorio y servicio e implementar interfaz creada anteriormente
+7- Agregar servicio y repositorio en Program para inversion de dependencias.
+builder.Services.AddScoped<IArticuloServicio, ArticuloServicio>();
 builder.Services.AddScoped<IArticuloRepositorio, ArticuloRepositorio>();
 8- Actualizar controlador para que use Repositorio.
 
