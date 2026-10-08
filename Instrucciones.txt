@@ -1,3 +1,4 @@
+Si desea y de preferencia puede migrar este proyecto a una version mas nueva del framework como .net 10, luego:
 1- Crear carpeta y clase Dto
 2- Crear carpeta e interfaz para repositorio y servicio
 3- Instalar AutoMapper
